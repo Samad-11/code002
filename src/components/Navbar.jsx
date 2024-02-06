@@ -31,7 +31,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="navbar bg-base-100 border border-black ">
+    <div className="navbar bg-base-100 border border-black z-10 ">
       <div className="flex-1 ">
         <Link href="/" className=" text-xl">
           <Image src={logo} alt={"logoImg"} width={"50"} height={"50"} />
