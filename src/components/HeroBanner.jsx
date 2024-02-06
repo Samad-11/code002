@@ -8,9 +8,13 @@ import UiButton from "./UiButton";
 const HeroBanner = () => {
   return (
     <div className="w-screen flex items-center justify-between">
-      <div id="left-hero" className="p-4 ">
-        <h1 className="text-6xl font-bold">Charity and donation</h1>
-        <p className="font-semibold mt-4">
+      <div id="left-hero" className="p-4 mt-16">
+        <p className="text-bold font-mono text-black text-4xl m-5">
+          Welcome to{" "}
+          <span className="text-6xl font-extrabold"> Donation द्वार</span>
+        </p>
+        <h1 className="text-9xl font-bold">Charity and Donation</h1>
+        <p className="font-semibold mt-4 text-4xl">
           Donation is not just about giving it is about making a change.
         </p>
       </div>
@@ -21,7 +25,7 @@ const HeroBanner = () => {
         <figure className="absolute -bottom-36 -right-40 ">
           <Image src={ele2} alt="ele" className="bg-blend-screen" />
         </figure>
-        <figure className="absolute -bottom-36 -left-40 ">
+        <figure className="absolute -z-10 -bottom-36 -left-40 ">
           <Image src={ele3} alt="ele" className="bg-blend-screen" />
         </figure>
         <figure className="absolute -z-30 -top-36 -left-40 ">

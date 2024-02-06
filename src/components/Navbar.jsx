@@ -11,12 +11,12 @@ const Navbar = () => {
       linkTo: "/",
     },
     {
-      actionTitle: "about us",
-      linkTo: "/about",
+      actionTitle: "charity",
+      linkTo: "/charity",
     },
     {
-      actionTitle: "POSTS",
-      linkTo: "/post",
+      actionTitle: "about us",
+      linkTo: "/about",
     },
     {
       actionTitle: "helping hand",
