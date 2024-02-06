@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const navItems = [
@@ -12,6 +13,10 @@ const Navbar = () => {
     {
       actionTitle: "about us",
       linkTo: "/about",
+    },
+    {
+      actionTitle: "POSTS",
+      linkTo: "/post",
     },
     {
       actionTitle: "helping hand",
@@ -48,9 +53,10 @@ const Navbar = () => {
           ))}
         </ul>
         <span className="text-2xl font-bold "> | </span>
-        <Link href={"/blog"} className="btn btn-ghost mx-2 uppercase">
-          Blog
-        </Link>
+        <UserButton
+          className={"btn btn-ghost mx-2 uppercase"}
+          afterSignOutUrl="/"
+        />
       </div>
     </div>
   );

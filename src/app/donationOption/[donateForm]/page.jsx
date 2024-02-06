@@ -1,6 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+// import { CldImage, CldUploadImage } from "next-cloudinary";
+import { CldUploadButton } from "next-cloudinary";
 
 const donateForm = ({ params }) => {
+  const [imgurl, setImgurl] = useState("");
   console.log("====================================");
   console.log(params.donateForm);
   console.log("====================================");
@@ -29,12 +33,28 @@ const donateForm = ({ params }) => {
           }
           className="input input-bordered input-warning w-full my-2"
         />
+        {/* //input form */}
         {category != "Blood" && (
-          <input
-            type="file"
-            className="file-input file-input-bordered file-input-warning w-full my-2 "
-          />
+          <div className="file-input file-input-bordered file-input-warning w-full my-2 flex justify-center items-center">
+            <CldUploadButton
+              uploadPreset="xjeh0mjb"
+              onUpload={(res) => {
+                console.log(res);
+                setImgurl(res.info.url);
+              }}
+            />
+            <p className="">.....</p>
+          </div>
         )}
+        {/* image btn */}
+        {/* <CldUploadImage
+          uploadPreset="xjeh0mjb"
+          onUpload={(res) => {
+            console.log(res);
+            setUrl(res.info.url);
+            console.log(url);
+          }}
+        /> */}
         <button className="btn btn-warning w-full">
           Donate{" "}
           <svg
